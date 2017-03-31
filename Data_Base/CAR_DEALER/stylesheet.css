@@ -1,0 +1,16 @@
+.tabla th{
+	background-color: green;
+	color: white;
+	padding: 20px;
+}
+.tabla tr:hover {
+	background-color: gray;
+
+}
+.tabla tr{
+	background-color: white;
+	color: black;
+}
+.tabla{
+	color: white;
+}

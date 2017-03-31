@@ -1,0 +1,8 @@
+th{
+	background-color: green;
+	color: white;
+	padding: 20px;
+}
+tr:hover {
+	background-color: gray;
+}
