@@ -9,8 +9,8 @@ create table Employees(
   gender text(50),
   Job_Type VARCHAR(50),
   User_name VARCHAR(50) UNIQUE,
-  user_pw VARCHAR(50)
-
+  user_pw VARCHAR(50),
+  isAdmin boolean
 
 
 );
