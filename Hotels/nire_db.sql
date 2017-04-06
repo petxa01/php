@@ -1,3 +1,4 @@
+Drop table Employees;
 create table Employees(
   Nan VARCHAR (9) PRIMARY KEY,
   Name TEXT(50),
@@ -9,11 +10,12 @@ create table Employees(
   Job_Type VARCHAR(50),
   User_name VARCHAR(50),
   user_pw VARCHAR(50),
-  UNIQUE (User_name)
+  UNIQUE (User_name),
   UNIQUE (user_pw)
 
 
 );
+drop table Customers;
 create table Customers(
   Nan VARCHAR (9) PRIMARY KEY,
   Name TEXT(50),
@@ -25,16 +27,18 @@ create table Customers(
   Payment_method VARCHAR(50),
   User_name VARCHAR(50),
   user_pw VARCHAR(50),
-  UNIQUE (User_name)
+  UNIQUE (User_name),
   UNIQUE (user_pw)
 
 );
+drop table Rooms;
 create table Rooms(
   roomNumber int(4) PRIMARY KEY,
   floor int(2),
   type_of_room VARCHAR (30)
 
 );
+drop table Reservations;
 create table Reservation(
   resCod int(5) PRIMARY KEY,
   customer_nan VARCHAR(9) FOREIGN KEY ,
