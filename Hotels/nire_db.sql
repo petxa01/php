@@ -29,6 +29,18 @@ create table Customers(
   UNIQUE (user_pw)
 
 );
-create table Rooms{
+create table Rooms(
+  roomNumber int(4) PRIMARY KEY,
+  floor int(2),
+  type_of_room VARCHAR (30)
 
-  }
+);
+create table Reservation(
+  resCod int(5) PRIMARY KEY,
+  customer_nan VARCHAR(9) FOREIGN KEY ,
+  roomNumber int(4) FOREIGN KEY,
+  enterDate date(),
+  leaveDate date(),
+  FOREIGN KEY (customer_nan) REFERENCES Customers(Nan),
+  FOREIGN KEY (roomNumber) REFERENCES Rooms(roomNumber)
+);
