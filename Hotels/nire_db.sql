@@ -5,13 +5,12 @@ create table Employees(
   Surname1 Text(50),
   surname2 text(50),
   phone int(9),
-  email VARCHAR(50),
+  email VARCHAR(50) UNIQUE,
   gender text(50),
   Job_Type VARCHAR(50),
-  User_name VARCHAR(50),
-  user_pw VARCHAR(50),
-  UNIQUE (User_name),
-  UNIQUE (user_pw)
+  User_name VARCHAR(50) UNIQUE,
+  user_pw VARCHAR(50)
+
 
 
 );
@@ -22,13 +21,11 @@ create table Customers(
   Surname1 Text(50),
   surname2 text(50),
   phone int(9),
-  email VARCHAR(50),
+  email VARCHAR(50) UNIQUE,
   gender text(50),
   Payment_method VARCHAR(50),
-  User_name VARCHAR(50),
-  user_pw VARCHAR(50),
-  UNIQUE (User_name),
-  UNIQUE (user_pw)
+  User_name VARCHAR(50) UNIQUE,
+  user_pw VARCHAR(50)
 
 );
 drop table Rooms;
