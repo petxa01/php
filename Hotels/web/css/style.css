@@ -1360,4 +1360,9 @@ i.search:hover {
 	margin: 3em 0em 0em;
 	padding: 0em 0em 0em;
 }
+.login form input[type="text"] {
+	color: black !important;
+}
+.login form input[type="password"]{
+	color: black !important;
 }

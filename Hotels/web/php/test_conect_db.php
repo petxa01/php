@@ -6,7 +6,7 @@
 			echo "There is no conection to the DB.";
 			exit();
 		}
-		if(!mysqli_select_db($link, "db_enterprise"))
+		if(!mysqli_select_db($link, "hotel"))
 		{
 			echo "There is an error selecting the DB.";
 			exit();

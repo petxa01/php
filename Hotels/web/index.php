@@ -50,7 +50,95 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
+  <?php
+ if (isset($_GET["login"]) && $_GET["login"]==0) {
+   echo "<script type='text/javascript'>alert(\"Zure Id zenbakia edo pasahitza gaizki dago.\");</script>";
+ }
+ ?>
 <!-- header -->
+<?php
+if ($_SESSION["loged"]="yes") {
+  # code...
+  echo ";<div class=\"banner\">
+		<div class=\"container\" >
+				<div class=\"head-nav navbar-fixed-top\" style=\"background-color: #d9d9d9;\">
+						<span class=\"menu\"> </span>
+							<ul class=\"cl-effect-7\" >
+								<li><a href=\"#ourresort\" class=\"scroll\">our resort</a></li>
+								<li><a href=\"#suites\" class=\"scroll\">suites</a></li>
+								<li><a href=\"#services\" class=\"scroll\">services</a></li>
+								<li><a href=\"#reservations\" class=\"scroll\">reservations</a></li>
+								<li><a href=\"#contact\" class=\"scroll\">contact</a></li>
+								<div class=\"clearfix\"> </div>
+							</ul>
+				</div>
+					<!-- script-for-nav -->
+					<script>
+						$( \"span.menu\" ).click(function() {
+						  $( \".head-nav ul\" ).slideToggle(300, function() {
+							// Animation complete.
+						  });
+						});
+					</script>
+				<!-- script-for-nav -->
+				<div class=\"logo\">
+					<a href=\"index.html\"><img src=\"images/logo.png\" class=\"img-responsive\" alt=\"\" /></a>
+				</div>
+				<div class=\"banner-info\">
+					<p>Enjoy the stupendous calm and peace of this tree-shaded location cradled by mountains where time stands still.choose ease, harmony and wellbeing over the hectic pace of today's lifestyle!</p>
+				</div>
+		</div>
+	</div>";
+
+}else {
+  # code...
+  echo ";<div class=\"banner\">
+		<div class=\"container\" >
+				<div class=\"head-nav navbar-fixed-top\" style=\"background-color: #d9d9d9;\">
+						<span class=\"menu\"> </span>
+							<ul class=\"cl-effect-7\" >
+								<li><a href=\"#ourresort\" class=\"scroll\">our resort</a></li>
+								<li><a href=\"#suites\" class=\"scroll\">suites</a></li>
+								<li><a href=\"#services\" class=\"scroll\">services</a></li>
+								<li><a href=\"#reservations\" class=\"scroll\">reservations</a></li>
+								<li><a href=\"#contact\" class=\"scroll\">contact</a></li>
+                <li><form  action=\"sessions_users_query.php\" method=\"post\">
+                  <table >
+                    <tr>
+                      <td>user ID:</td><td><input class=\"login\" type=\"text\" name=\"userid\"></td>
+                    </tr>
+                    <tr>
+                      <td>Password: </td> <td><input class=\"login\" type=\"password\" name=\"password\"></td>
+                    </tr>
+                  </table>
+                  <input type=\"submit\" name=\"login\" value=\"Login\">
+                </form></li>
+									<div class=\"clearfix\"> </div>
+							</ul>
+				</div>
+					<!-- script-for-nav -->
+					<script>
+						$( \"span.menu\" ).click(function() {
+						  $( \".head-nav ul\" ).slideToggle(300, function() {
+							// Animation complete.
+						  });
+						});
+					</script>
+				<!-- script-for-nav -->
+				<div class=\"logo\">
+					<a href=\"index.html\"><img src=\"images/logo.png\" class=\"img-responsive\" alt=\"\" /></a>
+				</div>
+				<div class=\"banner-info\">
+					<p>Enjoy the stupendous calm and peace of this tree-shaded location cradled by mountains where time stands still.choose ease, harmony and wellbeing over the hectic pace of today's lifestyle!</p>
+				</div>
+		</div>
+	</div>";
+}
+
+
+
+
+?>
 	<div class="banner">
 		<div class="container" >
 				<div class="head-nav navbar-fixed-top" style="background-color: #d9d9d9;">
