@@ -1,0 +1,22 @@
+<?php
+include ("test_conect_db.php");
+$link=conectDataBase();
+echo $_POST["password"];
+$result=mysqli_query($link, "select user_pw from employees where user_name=".$_POST["userid"]);
+echo $result["user_pw"];
+$pw=mysqli_fetch_array($result["user_pw"]);
+echo $pw;
+
+#sha1($pw); para cifrar contraseñas
+
+if ($pw["user_pw"]==$_POST["password"]) {
+  # code...
+  $_SESSION["loged"]="yes";
+  $_SESSION["name"]=$pw["name"];
+  header("Location: index.php");
+}else {
+  # code...
+ header("Location: index.php?login=0");
+}
+
+ ?>

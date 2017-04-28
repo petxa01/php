@@ -102,7 +102,7 @@ if ($_SESSION["loged"]="yes") {
 								<li><a href=\"#services\" class=\"scroll\">services</a></li>
 								<li><a href=\"#reservations\" class=\"scroll\">reservations</a></li>
 								<li><a href=\"#contact\" class=\"scroll\">contact</a></li>
-                <li><form  action=\"sessions_users_query.php\" method=\"post\">
+                <li><form  action=\"php/sessions_users_query.php\" method=\"POST\">
                   <table >
                     <tr>
                       <td>user ID:</td><td><input class=\"login\" type=\"text\" name=\"userid\"></td>
@@ -261,7 +261,6 @@ if ($_SESSION["loged"]="yes") {
 			<div class="room-info1">
 					<ul>
 						<li><a href="#"><i class="search"></i>explore</a></li>
-						<li><a href="#"><i class="boo"></i>brochure</a></li>
 						<li><a href="#"><i class="bro"></i>booking</a></li>
 					</ul>
 			</div>
@@ -273,7 +272,6 @@ if ($_SESSION["loged"]="yes") {
 			<div class="room-info1">
 					<ul>
 						<li><a href="#"><i class="search"></i>explore</a></li>
-						<li><a href="#"><i class="boo"></i>brochure</a></li>
 						<li><a href="#"><i class="bro"></i>booking</a></li>
 					</ul>
 			</div>
@@ -285,7 +283,6 @@ if ($_SESSION["loged"]="yes") {
 			<div class="room-info1">
 					<ul>
 						<li><a href="#"><i class="search"></i>explore</a></li>
-						<li><a href="#"><i class="boo"></i>brochure</a></li>
 						<li><a href="#"><i class="bro"></i>booking</a></li>
 					</ul>
 			</div>
