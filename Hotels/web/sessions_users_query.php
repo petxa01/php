@@ -1,11 +1,9 @@
 <?php
+session_start();
 include ("test_conect_db.php");
 $link=conectDataBase();
-echo $_POST["password"];
 $result=mysqli_query($link, "select user_pw from employees where user_name=".$_POST["userid"]);
-echo $result["user_pw"];
-$pw=mysqli_fetch_array($result["user_pw"]);
-echo $pw;
+$pw=mysqli_fetch_array($result);
 
 #sha1($pw); para cifrar contraseñas
 

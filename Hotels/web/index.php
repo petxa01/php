@@ -11,7 +11,7 @@ session_start();
  ?>
 <html>
 <head>
-<title>Riviera  A Hotel Category Flat Bootstarp Resposive Website Template | 404 :: w3layouts</title>
+<title>Random Hotel name</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700,900' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 <script src="js/jquery.min.js"></script>
+<script src="js/validate.js">
+
+</script>
 <script src="js/modernizr.custom.js"></script>
 <script type="text/javascript" src="js/move-top.js"></script>
        <script type="text/javascript" src="js/easing.js"></script>
@@ -57,18 +60,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  ?>
 <!-- header -->
 <?php
-if ($_SESSION["loged"]="yes") {
+print (isset($_SESSION["loged"]));
+if (isset($_SESSION["loged"])) {
   # code...
-  echo ";<div class=\"banner\">
+  echo "<div class=\"banner\">
 		<div class=\"container\" >
 				<div class=\"head-nav navbar-fixed-top\" style=\"background-color: #d9d9d9;\">
 						<span class=\"menu\"> </span>
 							<ul class=\"cl-effect-7\" >
-								<li><a href=\"#ourresort\" class=\"scroll\">our resort</a></li>
+								<li><a href=\"#ourresort\" class=\"scroll\">Resort</a></li>
 								<li><a href=\"#suites\" class=\"scroll\">suites</a></li>
 								<li><a href=\"#services\" class=\"scroll\">services</a></li>
 								<li><a href=\"#reservations\" class=\"scroll\">reservations</a></li>
 								<li><a href=\"#contact\" class=\"scroll\">contact</a></li>
+                <form  action=\"session_close.php\" method=\"post\">
+                <a href=\"session_close.php\"></a><input type=\"submit\" name=\"logout\" value=\"Logout\">
+                </form>
 								<div class=\"clearfix\"> </div>
 							</ul>
 				</div>
@@ -97,12 +104,12 @@ if ($_SESSION["loged"]="yes") {
 				<div class=\"head-nav navbar-fixed-top\" style=\"background-color: #d9d9d9;\">
 						<span class=\"menu\"> </span>
 							<ul class=\"cl-effect-7\" >
-								<li><a href=\"#ourresort\" class=\"scroll\">our resort</a></li>
+								<li><a href=\"#ourresort\" class=\"scroll>Resort</a></li>
 								<li><a href=\"#suites\" class=\"scroll\">suites</a></li>
 								<li><a href=\"#services\" class=\"scroll\">services</a></li>
 								<li><a href=\"#reservations\" class=\"scroll\">reservations</a></li>
 								<li><a href=\"#contact\" class=\"scroll\">contact</a></li>
-                <li><form  action=\"php/sessions_users_query.php\" method=\"POST\">
+                <li><form  onsubmit=\"return validateForm()\" action=\"sessions_users_query.php\" name=\"loginform\" method=\"POST\">
                   <table >
                     <tr>
                       <td>user ID:</td><td><input class=\"login\" type=\"text\" name=\"userid\"></td>
@@ -111,7 +118,7 @@ if ($_SESSION["loged"]="yes") {
                       <td>Password: </td> <td><input class=\"login\" type=\"password\" name=\"password\"></td>
                     </tr>
                   </table>
-                  <input type=\"submit\" name=\"login\" value=\"Login\">
+                  <input type=\"submit\" name=\"login\"  value=\"Login\">
                 </form></li>
 									<div class=\"clearfix\"> </div>
 							</ul>
@@ -139,48 +146,7 @@ if ($_SESSION["loged"]="yes") {
 
 
 ?>
-	<div class="banner">
-		<div class="container" >
-				<div class="head-nav navbar-fixed-top" style="background-color: #d9d9d9;">
-						<span class="menu"> </span>
-							<ul class="cl-effect-7" >
-								<li><a href="#ourresort" class="scroll">our resort</a></li>
-								<li><a href="#suites" class="scroll">suites</a></li>
-								<li><a href="#services" class="scroll">services</a></li>
-								<li><a href="#reservations" class="scroll">reservations</a></li>
-								<li><a href="#contact" class="scroll">contact</a></li>
-                <li><form  action="sessions_users_query.php" method="post">
-                  <table style="color:#fff;">
-                    <tr>
-                      <td>user ID:</td><td><input type="text" name="userid"></td>
-                    </tr>
-                    <tr>
-                      <td>Password: </td> <td><input type="password" name="password"></td>
-                    </tr>
-                  </table>
-                  <input type="submit" name="login" value="Login">
-                </form></li>
-									<div class="clearfix"> </div>
-							</ul>
-				</div>
-					<!-- script-for-nav -->
-					<script>
-						$( "span.menu" ).click(function() {
-						  $( ".head-nav ul" ).slideToggle(300, function() {
-							// Animation complete.
-						  });
-						});
-					</script>
-				<!-- script-for-nav -->
-				<div class="logo">
-					<a href="index.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>
-				</div>
-				<div class="banner-info">
-					<p>Enjoy the stupendous calm and peace of this tree-shaded location cradled by mountains where time stands still.choose ease, harmony and wellbeing over the hectic pace of today's lifestyle!</p>
-				</div>
-		</div>
-	</div>
-<!-- header -->
+
 <!-- ENCHANTMENT  -->
 	<div class="ENCHANTMENT" id="ourresort">
 			<div class="col-md-6 ENCHANTMENT-left">
@@ -242,10 +208,28 @@ if ($_SESSION["loged"]="yes") {
 		</div>
 		<div class="col-md-4 wonder-mid">
 			<img src="images/logo1.png" class="img-responsive" alt="">
-			<h5>ACCOMMODATION</h5>
-			<h3>EMOTIONS AND WONDER</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque justo ac velit facilisis </p>
-		</div>
+			<h5>Rooms</h5>
+      <?php
+               include("test_conect_db.php");
+               $link=conectDataBase();
+               $result=mysqli_query($link, "select * from rooms;");
+             ?>
+             <table class="table">
+               <thead>
+               <tr>
+                 <th>Room ID</th><th>Room Number</th><th>Floor Number</th><th>Type of Room</th>
+               </tr>
+             </thead>
+               <?php
+                 while ($erregistroa=mysqli_fetch_array($result)) {
+                   # code...
+                   echo "<tbody><tr><td>".$erregistroa["id"]."</td><td>".$erregistroa["roomNumber"]."</td><td>".$erregistroa["floorNumber"]."</td><td>".$erregistroa["type_of_room"]."</td></tr></tbody>";
+                 }
+                 echo "</table>";
+                 mysqli_free_result($result);
+                 mysqli_close($link);
+                ?>
+    </div>
 		<div class="col-md-6 wonder-right">
 			<img src="images/bed2.jpg" class="img-responsive" alt="">
 		</div>

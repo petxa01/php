@@ -1,5 +1,4 @@
 <?php
-
 	function conectDataBase(){
 		if(!($link = mysqli_connect("localhost","root","")))
 		{
