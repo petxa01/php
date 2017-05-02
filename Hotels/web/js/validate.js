@@ -2,13 +2,13 @@ function validateForm() {
     var x = document.forms["loginform"]["userid"].value;
     var z = document.forms["loginform"]["password"].value;
     if (x == "" && z == "") {
-        alert("Zeure datuak sartu, mezedez");
+        alert("Enter your data please");
         return false;
     } else if (x == "") {
-      alert("Zeure IDa sartu, mezedez");
+      alert("Type your ID please");
       return false;
     } else if (z == "") {
-      alert('Zeure pasahitza idatzi, mezedez');
+      alert('Type your password please');
       return false;
     }else {
       return true;

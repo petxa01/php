@@ -55,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
   <?php
  if (isset($_GET["login"]) && $_GET["login"]==0) {
-   echo "<script type='text/javascript'>alert(\"Zure Id zenbakia edo pasahitza gaizki dago.\");</script>";
+   echo "<script type='text/javascript'>alert(\"Your ID or password is wrong.\");</script>";
  }
  ?>
 <!-- header -->
@@ -109,19 +109,20 @@ if (isset($_SESSION["loged"])) {
 								<li><a href=\"#services\" class=\"scroll\">services</a></li>
 								<li><a href=\"#reservations\" class=\"scroll\">reservations</a></li>
 								<li><a href=\"#contact\" class=\"scroll\">contact</a></li>
-                <li><form  onsubmit=\"return validateForm()\" action=\"sessions_users_query.php\" name=\"loginform\" method=\"POST\">
-                  <table >
-                    <tr>
-                      <td>user ID:</td><td><input class=\"login\" type=\"text\" name=\"userid\"></td>
-                    </tr>
-                    <tr>
-                      <td>Password: </td> <td><input class=\"login\" type=\"password\" name=\"password\"></td>
-                    </tr>
-                  </table>
-                  <input type=\"submit\" name=\"login\"  value=\"Login\">
-                </form></li>
+
 									<div class=\"clearfix\"> </div>
 							</ul>
+              <form  onsubmit=\"return validateForm()\" action=\"sessions_users_query.php\" name=\"loginform\" method=\"POST\">
+                <table style=\"float:rigth; \">
+                  <tr>
+                    <td>user ID:</td><td><input class=\"login\" type=\"text\" name=\"userid\"></td>
+                  </tr>
+                  <tr>
+                    <td>Password: </td> <td><input class=\"login\" type=\"password\" name=\"password\"></td>
+                  </tr>
+                </table>
+                <input type=\"submit\" name=\"login\"  value=\"Login\">
+              </form>
 				</div>
 					<!-- script-for-nav -->
 					<script>
@@ -158,23 +159,17 @@ if (isset($_SESSION["loged"])) {
 							<ul class="slides">
 								<li>
 									<div class="slider-info">
-										<img src="images/logo1.png" class="img-responsive" alt="">
-										<h3>ENCHANTMENT AND SPLENDOUR</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque justo ac velit facilisis convallis vel id nisi. Morbi hendrerit ac tellus eu luctus. Vestibulum ullamcorper elit eu eleifend posuere. Proin imperdiet nisl eu est vulputate, vel tincidunt lacus pretium.</p>
+										<img src="images/room1.jpg" class="img-responsive" alt="">
+
+								</li>
+								<li>
+									<div class="slider-info">
+										<img src="images/room2.jpg" class="img-responsive" alt="">
 									</div>
 								</li>
 								<li>
 									<div class="slider-info">
-										<img src="images/logo1.png" class="img-responsive" alt="">
-										<h3>ENCHANTMENT AND SPLENDOUR</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque justo ac velit facilisis convallis vel id nisi. Morbi hendrerit ac tellus eu luctus. Vestibulum ullamcorper elit eu eleifend posuere. Proin imperdiet nisl eu est vulputate, vel tincidunt lacus pretium.</p>
-									</div>
-								</li>
-								<li>
-									<div class="slider-info">
-										<img src="images/logo1.png" class="img-responsive" alt="">
-										<h3>ENCHANTMENT AND SPLENDOUR</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque justo ac velit facilisis convallis vel id nisi. Morbi hendrerit ac tellus eu luctus. Vestibulum ullamcorper elit eu eleifend posuere. Proin imperdiet nisl eu est vulputate, vel tincidunt lacus pretium.</p>
+										<img src="images/room3.jpg" class="img-responsive" alt="">
 									</div>
 								</li>
 							</ul>
@@ -217,13 +212,13 @@ if (isset($_SESSION["loged"])) {
              <table class="table">
                <thead>
                <tr>
-                 <th>Room ID</th><th>Room Number</th><th>Floor Number</th><th>Type of Room</th>
+                 <th>Room Number</th><th>Floor Number</th><th>Type of Room</th>
                </tr>
              </thead>
                <?php
                  while ($erregistroa=mysqli_fetch_array($result)) {
                    # code...
-                   echo "<tbody><tr><td>".$erregistroa["id"]."</td><td>".$erregistroa["roomNumber"]."</td><td>".$erregistroa["floorNumber"]."</td><td>".$erregistroa["type_of_room"]."</td></tr></tbody>";
+                   echo "<tbody><tr><td>".$erregistroa["roomNumber"]."</td><td>".$erregistroa["floorNumber"]."</td><td>".$erregistroa["type_of_room"]."</td></tr></tbody>";
                  }
                  echo "</table>";
                  mysqli_free_result($result);
