@@ -23,12 +23,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700,900' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 <script src="js/jquery.min.js"></script>
-<script src="js/validate.js">
-
-</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
 <script type="text/javascript" src="js/move-top.js"></script>
-       <script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){
@@ -88,9 +88,7 @@ if (isset($_SESSION["loged"])) {
 						});
 					</script>
 				<!-- script-for-nav -->
-				<div class=\"logo\">
-					<a href=\"index.html\"><img src=\"images/logo.png\" class=\"img-responsive\" alt=\"\" /></a>
-				</div>
+				
 				<div class=\"banner-info\">
 					<p>Enjoy the stupendous calm and peace of this tree-shaded location cradled by mountains where time stands still.choose ease, harmony and wellbeing over the hectic pace of today's lifestyle!</p>
 				</div>
@@ -109,20 +107,63 @@ if (isset($_SESSION["loged"])) {
 								<li><a href=\"#services\" class=\"scroll\">services</a></li>
 								<li><a href=\"#reservations\" class=\"scroll\">reservations</a></li>
 								<li><a href=\"#contact\" class=\"scroll\">contact</a></li>
+                <li><form  onsubmit=\"return validateForm()\" action=\"sessions_users_query.php\" name=\"loginform\" method=\"POST\">
+                  <table >
+                    <tr>
+                      <td>user ID:</td><td><input class=\"login\" type=\"text\" name=\"userid\"></td>
+                    </tr>
+                    <tr>
+                      <td>Password: </td> <td><input class=\"login\" type=\"password\" name=\"password\"></td>
+                    </tr>
+                  </table>
+                  <input type=\"submit\" name=\"login\"  value=\"Login\">
+                </form></li>
+                <h2>Modal Example</h2>
+                <!-- Trigger the modal with a button -->
+                <button type=\"button\" class=\"btn btn-info btn-lg\" data-toggle=\"modal\" data-target=\"#myModal\">Open Modal</button>
 
+                <!-- Modal -->
+                <div class=\"modal fade\" id=\"myModal\" role=\"dialog\">
+                  <div class=\"modal-dialog\">
+
+                    <!-- Modal content-->
+                    <div class=\"modal-content\">
+                      <div class=\"modal-header\">
+                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                        <h4 class=\"modal-title\">Modal Header</h4>
+                      </div>
+                      <div class=\"modal-body\">
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                        <p>Some text in the modal.</p>
+                      </div>
+                      <div class=\"modal-footer\">
+                        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
 									<div class=\"clearfix\"> </div>
+
+
+
 							</ul>
-              <form  onsubmit=\"return validateForm()\" action=\"sessions_users_query.php\" name=\"loginform\" method=\"POST\">
-                <table style=\"float:rigth; \">
-                  <tr>
-                    <td>user ID:</td><td><input class=\"login\" type=\"text\" name=\"userid\"></td>
-                  </tr>
-                  <tr>
-                    <td>Password: </td> <td><input class=\"login\" type=\"password\" name=\"password\"></td>
-                  </tr>
-                </table>
-                <input type=\"submit\" name=\"login\"  value=\"Login\">
-              </form>
 				</div>
 					<!-- script-for-nav -->
 					<script>
